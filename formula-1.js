@@ -22,7 +22,7 @@ const drivers = [
     { player: 'George Russell', rank: 21, team: 'Williams', number: 63, points: 0, country: 'United Kingdom' },
 ]
 
-console.log(drivers);
+// console.log(drivers);
 
 /* **************************************************************************************
 
@@ -33,3 +33,26 @@ console.log(drivers);
 
 
 // Write code here
+function FormulaOne(player, team, country) {
+    this.player = player;
+    this.team = team;
+    this.country = country;
+}
+const newPlayers = drivers.map(({player, team, country}) => {
+  return new FormulaOne(player, team, country)
+
+})
+console.log(newPlayers);
+// const driversArray = drivers.map(({player, team, country}) => ({player, team, country}))
+  // const {player, team, country} = driver;
+//   return {player, team, country}
+// })
+  
+//   {
+//   return {player: driver.player, team: driver.team, country: driver.country}
+
+// console.log(driversArray);
+
+
+
+
